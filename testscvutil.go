@@ -34,11 +34,11 @@ type User struct {
 
 func main() {
 	var csvInput = []byte(`model,mpg,cyl,disp,hp 
-	Mazda RX4,21,6,160,110
-	Mazda RX4 Wag,21,6,160,110
-	Datsun 710,22.8,4,108,93
-	Hornet 4 Drive,21.4,6,258,110
-	Hornet Sportabout,18.7,8,360,175`)
+Mazda RX4,21,6,160,110
+Mazda RX4 Wag,21,6,160,110
+Datsun 710,22.8,4,108,93
+Hornet 4 Drive,21.4,6,258,110
+Hornet Sportabout,18.7,8,360,175`)
 
 	fmt.Println("================= Unmarshall result ===================")
 	unmarshal(csvInput)
