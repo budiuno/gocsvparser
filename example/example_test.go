@@ -36,3 +36,21 @@ func TestMtcars(t *testing.T) {
 		t.Logf("%+v", c)
 	}
 }
+
+func TestMtcarsWithOpts(t *testing.T) {
+	var (
+		cars []mtcarsFlat
+		err  error
+	)
+	separtors := rune(';')
+	comma := gocsvparser.CommaOption(separtors)
+
+	err = gocsvparser.Unmarshal(MtcarsCsvSeps, &cars, comma)
+	if err != nil {
+		t.Fatalf("unexpected error %+v", err)
+	}
+
+	for _, c := range cars {
+		t.Logf("%+v", c)
+	}
+}
